@@ -19,7 +19,7 @@
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
+    --fs-h3: 1.75rem;
     --fs-body: 1rem;
     
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
@@ -73,9 +73,14 @@ h2 {
     font-weight: var(--fw-sec);
 }
 
+h3 {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-h3);
+    font-weight: 500;
+}
+
 img {
-    height: 250px;
-    width: 250px;
+    max-width: 400px;
 }
 
 header,
@@ -109,18 +114,30 @@ section {
 }
 
 .zone-wrapper {
-    margin-right: 5vw;
-    margin-left: 5vw;
-    margin-top: 40vh;
+    margin-top: 20vh;
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 3rem;
+    place-items: center;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 2rem;
     text-align: center;
 }
 
 .left-zone {
     text-align: left;
-    padding-left: 150px;
+}
+
+.title {
+    padding-left: 50px;
+}
+
+.left-zone-subtext {
+    padding: 15px;
+    max-width: 500px;
+}
+
+.right-zone {
+    margin-right: 15vw;
+    padding-right: 5vw;
 }
 
 
