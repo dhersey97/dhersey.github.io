@@ -83,6 +83,18 @@ img {
     max-width: 400px;
 }
 
+button {
+    background-color: #3374ff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 15px;
+    cursor: pointer;
+}
+
 header,
 nav,
 footer,
@@ -113,7 +125,11 @@ section {
     width: calc(100% - 200px);
 }
 
-.zone-wrapper {
+/*  Home section    */
+.home-container {
+}
+
+.home-zone-wrapper {
     margin-top: 20vh;
     display: grid;
     place-items: center;
@@ -122,22 +138,183 @@ section {
     text-align: center;
 }
 
-.left-zone {
+.home-left-zone {
     text-align: left;
+    margin-left: 10vw;
+}
+
+.home-left-zone-subtext {
+    padding: 15px;
+    max-width: 500px;
+}
+
+.home-right-zone {
+    margin-right: 15vw;
+    padding-right: 5vw;
 }
 
 .title {
     padding-left: 50px;
 }
 
-.left-zone-subtext {
-    padding: 15px;
-    max-width: 500px;
+/*  About Me Section    */
+.about-container {
 }
 
-.right-zone {
+.about-zone-wrapper {
+    margin-top: 15vh;
     margin-right: 15vw;
-    padding-right: 5vw;
+    margin-left: 15vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "profileimg intro"
+        "myskills myskills"
+        "experience experience";      
 }
 
+.aboutimg {
+    grid-area: profileimg;
+    padding-left: 5vw;
+}
 
+.intro {
+    grid-area: intro;
+    line-height: 2em;
+}
+
+.skills {
+    grid-area: myskills;
+    margin-top: 5vh auto;
+}
+
+.skills:before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width:60%;
+    padding-bottom: 20px;
+    padding-top: 40px;
+    border-bottom: 1px solid grey;
+}
+
+.skills::after{
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width:60%;
+    padding-top: 40px;
+    border-bottom: 1px solid grey;
+
+}
+
+.skill-bar-container{
+    width:80%;
+    margin: auto;
+}
+@keyframes load{
+    from {
+        width: 0%;
+    }
+}
+@-webkit-keyframes load{
+    from {
+        width: 0%;
+    }
+}
+@-moz-keyframes load {
+    from {
+        width: 0%;
+    }
+}
+@-o-keyframes load {
+    from {
+        width: 0%;
+    }
+}
+
+.bar {
+    background-color: #EEE;
+    padding: 2px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .5)
+}
+
+.bar::before {
+    content: attr(data-skill);
+    background-color: #f3b0ff;
+    display: inline-block;
+    padding: 5px 0 5px 10px;
+    border-radius: inherit;
+    animation: load 2s 0s;
+    -webkit-animation: load 2s 0s;
+    -moz-animation: load 2s 0s;
+    -o-animation: load 2s 0s;
+}
+
+.bar.front::before {
+    background-color: #3374ff;
+}
+
+.bar.back::before {
+    background-color: #a6cfe3;
+}
+
+.bar.expert::before {
+    width: calc(100% - 1px);
+}
+
+.bar.advanced::before {
+    width: calc(80% - 1px);
+}
+
+.bar.intermediate::before {
+    width: calc(60% - 1px);
+}
+
+.bar.basic::before {
+    width: calc(40% - 1px);
+}
+
+.bar.learning::before {
+    width: calc(20% - 1px);
+}
+
+.experience {
+    grid-area: experience;
+}
+
+.experience-card {
+    background-color:#3374ff;
+    border-radius: 2px;
+    margin: 4vh;
+    padding: 10px;
+}
+
+.experience-card-date {
+    background-color: #203f83;
+    margin-left: -20px;
+    padding: 5px;
+    width: max-content;
+}
+
+.experience-title {
+    margin-top: 5px;
+    font-weight: var(--fw-bold);
+}
+
+.experience-location {
+    margin-left: 5px;
+    font-weight: var(--fw-sec);
+}
+
+.experience-body {
+    margin-top: 5px;
+}
+
+/*  Portfolio   */
