@@ -110,12 +110,18 @@ section {
     bottom: 0;
 }
 
+.logo {
+    height: 20vh;
+}
+
 .nav-list {
     text-align: center;
 }
 
-.logo {
-    height: 20vh;
+/*  Because home is the first page of the site, 
+    initial that li to active color             */
+.first-page {
+    background-color: #404040;
 }
 
 .main {
@@ -127,6 +133,7 @@ section {
 
 /*  Home section    */
 .home-container {
+    display: initial;
 }
 
 .home-zone-wrapper {
@@ -159,6 +166,7 @@ section {
 
 /*  About Me Section    */
 .about-container {
+    display: none;
 }
 
 .about-zone-wrapper {
