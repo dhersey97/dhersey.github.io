@@ -95,6 +95,15 @@ button {
     cursor: pointer;
 }
 
+label{
+    text-align: left;
+    font-weight: bold;
+}
+
+textarea {
+    height: 20vh;
+}
+
 header,
 nav,
 footer,
@@ -325,4 +334,70 @@ section {
     margin-top: 5px;
 }
 
-/*  Portfolio   */
+/*  Work Section   */
+
+.work-container {
+    display: none;
+}
+
+.work-zone-wrapper {
+    margin: 10vh 15vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr;
+    grid-template-areas: 
+    "pintro pintro pintro"
+    "pimage ptitle ptitle"
+    "pimage pdesc pdesc";
+}
+
+.project-intro {
+    grid-area: pintro;
+    text-align: center;
+}
+
+.project-image {
+    grid-area: pimage;
+}
+
+.project-title {
+    grid-area: ptitle;
+    padding-left: 2vw;
+    padding-top: 5vh;
+}
+
+.project-desc {
+    grid-area: pdesc;
+    padding-left: 2vw;
+}
+
+.project-desc-content {
+    padding-top: 3vh;
+}
+
+/*  Contact Me Section  */
+.contact-container {
+    display: none;
+}
+
+.form-container {
+    margin-top: 20vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+.input-bar {
+    width: 100%;
+    margin-bottom: 2vh;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid whitesmoke
+}
+
+.control {
+    position: relative;
+}
+
+.contactForm{
+    
+}
