@@ -63,6 +63,11 @@ a {
     color: var(--clr-light);
 }
 
+/*  Social List Icons Hover */
+.social-list > a:hover {
+    color: #3C1874;
+}
+
 ul {
     padding: 0;
     list-style-type: none;
@@ -72,6 +77,10 @@ li {
     list-style: none;
     padding: 2vh;
     border-bottom: var(--border-1);
+}
+
+li:hover {
+    background-color: var(--clr-accent);
 }
 
 #homeItem {
@@ -100,6 +109,7 @@ h3 {
 
 img {
     max-width: 400px;
+    filter: drop-shadow(7px 7px 4px rgba(0, 0, 0, 0.7));
 }
 
 button {
