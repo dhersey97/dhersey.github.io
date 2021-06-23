@@ -127,6 +127,15 @@ section {
     text-align: center;
 }
 
+.social-list {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    word-spacing: 1vw;
+}
+
 /*  Because home is the first page of the site, 
     initial that li to active color             */
 .first-page {
@@ -165,7 +174,7 @@ section {
 }
 
 .home-right-zone {
-    margin-right: 15vw;
+    margin-right: 5vw;
     padding-right: 5vw;
 }
 
@@ -399,18 +408,15 @@ section {
 }
 
 @media only screen and (max-width: 1450px){
-    /*Hides left header navigation*/
-    .left-header {
-        display: none;
+    :root {
+        --fs-h1: 2.5rem;
     }
 
-    .main {
-        left: 0px;
-        width: 100%;
-    }
+}
 
-    .home-right-zone {
-        margin-right: 0;
+@media only screen and (max-width: 1350px){
+    img {
+        max-width: 300px;
     }
 }
 
@@ -421,18 +427,82 @@ section {
         --fs-h3: 1.25rem;
         --fs-body: 1rem;
     }
-}
 
-@media only screen and (max-width: 1000px) {
     .home-left-zone{
         margin-left: 5vw;
     }
+}
 
+@media only screen and (max-width: 1000px) {
     .home-left-zone-subtext {
         padding: 0;
     }
 
     .title {
         padding-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    .left-header {
+        display: none;
+    }
+
+    .main {
+        left: 0;
+        width: 100%;
+    }
+
+    .home-left-zone {
+        margin-left: 10vw;
+    }
+}
+
+@media only screen and (max-width: 801px){
+    :root {
+        --fs-h1: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    :root {
+        --fs-h2: 1.5rem;
+    }
+
+    img {
+        max-width: 250px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    :root {
+        --fs-h1: 1.35rem;
+        --fs-h3: 1.15rem;
+    }
+
+    .home-left-zone{
+        margin-left: 5vw;
+    }
+
+    .home-right-zone{
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    :root {
+        --fs-h1: 2.5rem;
+        --fs-h2: 2.25rem;
+        --fs-h3: 1.75rem;
+        --fs-body: 1rem;
+    }
+
+    .home-zone-wrapper{
+        margin-top: 5vh;
+        grid-template-columns: 1fr;
+    }
+
+    .home-left-zone-subtext{
+        max-width: 400px;
     }
 }
