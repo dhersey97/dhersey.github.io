@@ -5,22 +5,36 @@
 }
 
 :root {
-    --ff-primary: 'Roboto', sans-serif;
-    --ff-secondary: 'Roboto', monospace;
+    --ff-primary: 'Open Sans', sans-serif;
+    --ff-secondary: 'Open Sans', monospace;
     
     --fw-reg: 300;
     --fw-sec: 400;
     --fw-bold: 900;
     
+    --clr-font1: #3C1874;
+    --clr-font2: white;
+    --clr-fontBody: #283747;
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-accent: #8A3030;
-    --clr-bckgrnd: #444;
+    --clr-accent: #3c1874;
+    --clr-accentLight: #DE354C;
+    --clr-accentDark: #932432;
+    --clr-linkActive: #3c1874;
+    --clr-bckgrnd: #F3F3F3;
+    --clr-leftHeader: #283747;
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.75rem;
-    --fs-body: 1rem;
+    --fs-body: 1.2rem;
+
+    --lh-body: 1.75rem;
+    --lh-h2: 1.25em;
+    --lh-intro: 2.25em;
+
+    --border-1: 1px solid grey;
+    --border-2: 1px solid grey;
     
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
@@ -32,11 +46,11 @@ html {
 
 body {
     background-color: var(--clr-bckgrnd);
-    color: var(--clr-light);
+    color: var(--clr-fontBody);
     font-family: var(--ff-primary);
-    font-weight: var(--fw-reg);
+    font-weight: var(--fw-sec);
     font-size: var(--fs-body);
-    line-height: 1.5rem;
+    line-height: var(--lh-body);
     margin: 0;
     padding: 0;
 }
@@ -57,20 +71,25 @@ ul {
 li {
     list-style: none;
     padding: 2vh;
-    border-bottom: 1px solid grey;
-    border-radius: 3%;
+    border-bottom: var(--border-1);
+}
+
+#homeItem {
+    border-top: var(--border-1);
 }
 
 h1 {
     font-family: var(--ff-secondary);
     font-size: var(--fs-h1);
     font-weight: var(--fw-bold);
+    color: var(--clr-font1);
 }
 
 h2 {
     font-family: var(--ff-secondary);
     font-size: var(--fs-h2);
     font-weight: var(--fw-sec);
+    line-height: var(--lh-h2);
 }
 
 h3 {
@@ -84,9 +103,9 @@ img {
 }
 
 button {
-    background-color: #3374ff;
+    background-color: var(--clr-accentDark);
     border: none;
-    color: white;
+    color: var(--clr-light);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -113,7 +132,7 @@ section {
 
 .left-header {
     width: 200px;
-    background-color: black;
+    background-color: var(--clr-leftHeader);
     position: fixed;
     top: 0;
     bottom: 0;
@@ -139,7 +158,7 @@ section {
 /*  Because home is the first page of the site, 
     initial that li to active color             */
 .first-page {
-    background-color: #404040;
+    background-color: var(--clr-linkActive);
 }
 
 .main {
@@ -207,7 +226,10 @@ section {
 
 .intro {
     grid-area: intro;
-    line-height: 2em;
+}
+
+.intro-content{
+    line-height: var(--lh-body);
 }
 
 .skills {
@@ -222,7 +244,7 @@ section {
     width:60%;
     padding-bottom: 20px;
     padding-top: 40px;
-    border-bottom: 1px solid grey;
+    border-bottom: var(--border-2);
 }
 
 .skills::after{
@@ -231,7 +253,7 @@ section {
     margin: 0 auto;
     width:60%;
     padding-top: 40px;
-    border-bottom: 1px solid grey;
+    border-bottom: var(--border-2);
 
 }
 
@@ -261,13 +283,13 @@ section {
 }
 
 .bar {
-    background-color: #EEE;
+    background-color: var(--clr-bckgrnd);
     padding: 2px;
     border-radius: 30px;
     margin-bottom: 10px;
     font-size: 20px;
-    color: #FFF;
-    font-weight: bold;
+    color: var(--clr-light);
+    font-weight: var(--fw-sec);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .5)
 }
 
@@ -284,7 +306,7 @@ section {
 }
 
 .bar.front::before {
-    background-color: #3374ff;
+    background-color: var(--clr-accentLight);
 }
 
 .bar.back::before {
@@ -316,14 +338,15 @@ section {
 }
 
 .experience-card {
-    background-color:#3374ff;
+    background-color: var(--clr-accentLight);
+    color: var(--clr-light);
     border-radius: 2px;
     margin: 4vh;
     padding: 10px;
 }
 
 .experience-card-date {
-    background-color: #203f83;
+    background-color: var(--clr-accentDark);
     margin-left: -20px;
     padding: 5px;
     width: max-content;
@@ -350,7 +373,7 @@ section {
 }
 
 .work-zone-wrapper {
-    margin: 10vh 15vw;
+    margin: 5vh 15vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.5fr 0.5fr 1fr;
@@ -400,12 +423,15 @@ section {
     margin-bottom: 2vh;
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid whitesmoke
+    border: var(--border-1);
 }
 
 .control {
     position: relative;
 }
+
+
+/*  MEDIA QUERIES   */
 
 @media only screen and (max-width: 1450px){
     :root {
@@ -506,3 +532,4 @@ section {
         max-width: 400px;
     }
 }
+

@@ -8,22 +8,22 @@ const contactButton = document.getElementById("contact-button");
 // list item backgrounds back to "inactive" or black
 function hideAll() {
     document.getElementById("home").style.display = "none";
-    document.getElementById("homeItem").style.backgroundColor = 'black';
+    document.getElementById("homeItem").style.backgroundColor = 'var(--clr-leftHeader)';
 
     document.getElementById("about").style.display = "none";
-    document.getElementById("aboutItem").style.backgroundColor = 'black';
+    document.getElementById("aboutItem").style.backgroundColor = 'var(--clr-leftHeader)';
 
     document.getElementById("work").style.display = "none";
-    document.getElementById("workItem").style.backgroundColor = 'black';
+    document.getElementById("workItem").style.backgroundColor = 'var(--clr-leftHeader)';
 
     document.getElementById("contact").style.display = "none";
-    document.getElementById("contactItem").style.backgroundColor = 'black';
+    document.getElementById("contactItem").style.backgroundColor = 'var(--clr-leftHeader)';
 }
 
 // Changes the section as well as the color of the active list item
 function changeView(sectionName, buttonName) {
     hideAll();
-    document.getElementById(buttonName).style.backgroundColor = '#404040';
+    document.getElementById(buttonName).style.backgroundColor = 'var(--clr-accent)';
     document.getElementById(sectionName).style.display = "initial";
 }
 
