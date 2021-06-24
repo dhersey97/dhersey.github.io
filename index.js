@@ -8,24 +8,29 @@ const contactButton = document.getElementById("contact-button");
 // list item backgrounds back to "inactive" or black
 function hideAll() {
     document.getElementById("home").style.display = "none";
-    document.getElementById("homeItem").style.backgroundColor = 'var(--clr-leftHeader)';
+    document.getElementById("homeItem").style.backgroundColor = '';
 
     document.getElementById("about").style.display = "none";
-    document.getElementById("aboutItem").style.backgroundColor = 'var(--clr-leftHeader)';
+    document.getElementById("aboutItem").style.backgroundColor = '';
 
     document.getElementById("work").style.display = "none";
-    document.getElementById("workItem").style.backgroundColor = 'var(--clr-leftHeader)';
+    document.getElementById("workItem").style.backgroundColor = '';
 
     document.getElementById("contact").style.display = "none";
-    document.getElementById("contactItem").style.backgroundColor = 'var(--clr-leftHeader)';
+    document.getElementById("contactItem").style.backgroundColor = '';
 }
 
 // Changes the section as well as the color of the active list item
 function changeView(sectionName, buttonName) {
     hideAll();
-    document.getElementById(buttonName).style.backgroundColor = 'var(--clr-accent)';
     document.getElementById(sectionName).style.display = "initial";
+    document.getElementById(buttonName).style.backgroundColor = 'var(--clr-accent)';
 }
+
+//Sets default color for initial active page
+window.addEventListener("load", () => {
+    changeView('home', 'homeItem');
+});
 
 // Event listeners for the navigation
 homeButton.addEventListener("click", () => {
