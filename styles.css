@@ -419,6 +419,15 @@ section {
     padding-left: 2vw;
 }
 
+.project-skill-list-wrapper {
+    margin-top: 0;
+}
+
+.project-skill-list {
+    padding: 2vh;
+    border-bottom: var(--border-1);
+}
+
 .project-desc-content {
     padding-top: 3vh;
 }
