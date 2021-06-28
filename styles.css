@@ -168,6 +168,7 @@ section {
     text-align: center;
 }
 
+/*  Footer  */
 .footer {
     display: none;
 }
@@ -197,10 +198,43 @@ section {
 }
 
 /*  Hamburger Nav (For Mobile) */
+.hamburger-nav {
+    position: fixed;
+    background: var(--clr-bckgrnd);
+    color: var(--clr-accent);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, 0.5, 1);
+}
+
+.hamburger-nav__list {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.hamburger__link {
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    padding: 15px;
+    border: 1px solid var(--clr-accent);
+}
+
 .hamburger-wrapper {
     display: none;
 }
 
+/*  Nav Toggle  */
 .hamburger-toggle{
     background-color: var(--clr-bckgrnd);
     border: 1px solid var(--clr-accent);
@@ -211,6 +245,62 @@ section {
     top: 1em;
     right: 1em;
     z-index: 1000;
+}
+
+.hamburger-open .hamburger-nav {
+    transform: translateX(0);
+}
+
+.hamburger-open .hamburger-toggle {
+    position: fixed;
+}
+
+.hamburger-open
+.hamburger {
+    transform: rotate(.625turn);
+
+}
+
+.hamburger-open
+.hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.hamburger-open
+.hamburger::after {
+    opacity: 0;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: var(--clr-accent);
+    width: 2em;
+    height: 3px;
+    border-radius: .5em;
+    display: block;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before {
+    top: 6px;
+}
+
+.hamburger::after {
+    bottom: 6px;
 }
 
 /*  Home section    */
@@ -480,6 +570,11 @@ section {
     border: var(--border-1);
 }
 
+.formSubmitButton {
+    display: flex;
+    justify-content: center;
+}
+
 .control {
     position: relative;
 }
@@ -609,6 +704,10 @@ section {
         display: none;
     }
 
+    .hamburger-wrapper{
+        display: initial;
+    }
+
     .main {
         left: 0;
         width: 100%;
@@ -616,6 +715,16 @@ section {
 
     .home-left-zone {
         margin-left: 10vw;
+    }
+
+    .social-list {
+        position: fixed;
+        background: var(--clr-bckgrnd);
+        border-top: 1px solid var(--clr-accent);
+    }
+    
+    .social-list.footer {
+        bottom: 0;
     }
 }
 
@@ -692,8 +801,90 @@ section {
             display: initial;
         }
 
-        .hamburger-wrapper{
-            display: initial;
+        /*  About Section   */
+        .about-zone-wrapper {
+            margin-top: 12vh;
+            margin-right: 0;
+            margin-left: 0;
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.25fr .75fr 0.5fr .75fr;
+            grid-template-areas: 
+            "profileimg"
+            "intro"
+            "myskills"
+            "experience";
+        }
+
+        .aboutimg {
+            padding-left: 15vw;
+        }
+
+        .intro {
+            padding-left: 8vw;
+        }
+
+        .intro-header {
+            text-align: center;
+        }
+
+        .about-button {
+            margin: 5px;
+            padding: 15px;
+        }
+
+        .about-button-wrapper {
+            display: flex;
+            justify-content: center;
+            padding-right: 25px;
+        }
+
+        .skills {
+            margin-bottom: 0;
+        }
+
+        .skills-header {
+            margin-left: 25px;
+        }
+
+        .experience-header {
+            margin-left: 25px;
+            line-height: 35px;
+        }
+
+        .experience{
+            margin-bottom: 5vh;
+        }
+
+        /*  Work Section    */
+        .work-zone-wrapper {
+            margin-top: 10vh;
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.2fr 0.2fr 0.5fr 0.5fr;
+            grid-template-areas: 
+            "pintro"
+            "ptitle"
+            "pimage"
+            "pdesc";
+        }
+
+        .project-title {
+            padding-top: 0vh;
+            margin-bottom: 1vh;
+            text-align: center;
+        }
+
+        .project-desc {
+            padding-top: 2vh;
+        }
+
+        .project-desc-content {
+            text-align: center;
+        }
+
+        /*  Contact Section */
+        .form-container {
+            margin-left: 10vw;
+            margin-right: 10vw;
         }
     }
 

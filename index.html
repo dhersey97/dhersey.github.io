@@ -50,7 +50,12 @@
                     <span class="hamburger"></span>
                 </button>
                 <nav class="hamburger-nav">
-
+                    <div class="hamburger-nav__list">
+                        <a href="#home" id ="HamHome" class="hamburger__link">Home</a>
+                        <a href="#about" id ="HamAbout" class="hamburger__link">About</a>
+                        <a href="#work" id ="HamWork" class="hamburger__link">Projects</a>
+                        <a href="#contact" id = "HamContact" class="hamburger__link">Contact Me</a>
+                    </div>
                 </nav>
             </div>
 
@@ -92,7 +97,7 @@
                             <img src="profile2.jpg">
                         </div>
                         <div class="intro">
-                            <h1>About Me</h1>
+                            <h1 class="intro-header">About Me</h1>
                             <h2>I am a recent Computer Science graduate 
                                 looking to start a career in Web Development!
                             </h2>
@@ -100,11 +105,13 @@
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut molestiae odio officia, asperiores ab, rem, veniam tempora dolor cum quae excepturi maxime. Velit, ipsa quae eum aspernatur eligendi cupiditate aut quibusdam rerum sint ratione aperiam laudantium quos a veniam ab! Nobis vero fugit modi eos quaerat vitae a sunt aut.
                             </div>
                             <br>
-                            <button class="about-button">Contact Me</button>
-                            <button class="about-button">Resume/CV</button>
+                            <div class="about-button-wrapper">
+                                <button class="about-button">Contact Me</button>
+                                <button class="about-button">Resume/CV</button>
+                            </div>
                         </div>
                         <div class="skills">
-                            <h1>Skills</h1>
+                            <h1 class = "skills-header">Skills</h1>
                             <div class="skill-bar-container">
                                 <div class="bar front expert" data-skill="HTML5"></div>
                                 <div class="bar front basic" data-skill="Java"></div>
@@ -114,7 +121,7 @@
                             </div>
                         </div>
                         <div class="experience">
-                            <h1>Education & Experience</h1>
+                            <h1 class = "experience-header">Education & Experience</h1>
                             <div class="experience-card">
                                 <div class="experience-card-date">2016 - 2020</div>
                                 <div class="experience-title">Bachelor's of Computer Science</div>
@@ -163,7 +170,9 @@
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil optio nobis, illum asperiores est excepturi non tempore obcaecati. Aspernatur, ipsa aliquam! Earum porro autem veritatis id, ab illo aliquid vel dicta assumenda distinctio exercitationem facere deleniti quaerat accusantium aspernatur quam, ut delectus iure, totam eum saepe veniam quasi? Molestiae.
                             </div>
                             <br>
-                            <button>View Github</button>
+                            <div class="formSubmitButton">
+                                <button class = "about-button">View Github</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -184,7 +193,9 @@
                             <input class="input-bar" type="text" name="email" placeholder="Enter Your Email" required>
                             <label for="message">Message *</label>
                             <textarea id="message" class="input-bar txtarea" placeholder="" required></textarea>
-                            <button>Submit</button>
+                            <div class="formSubmitButton">
+                                <button class = "about-button">Submit</button>
+                            </div>
                         </form>
                     </div>
                 </div>

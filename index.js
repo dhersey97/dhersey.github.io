@@ -4,6 +4,13 @@ const aboutButton = document.getElementById("about-button");
 const workButton = document.getElementById("work-button");
 const contactButton = document.getElementById("contact-button");
 
+// Hamburger Buttons
+const hamToggle = document.querySelector('.hamburger-toggle');
+const hamHome = document.getElementById('HamHome');
+const hamAbout = document.getElementById('HamAbout');
+const hamWork = document.getElementById('HamWork');
+const hamContact = document.getElementById('HamContact');
+
 // Hides the section as well as changes the color of the
 // list item backgrounds back to "inactive" or black
 function hideAll() {
@@ -46,5 +53,30 @@ workButton.addEventListener("click", () => {
 });
 
 contactButton.addEventListener("click", () => {
+    changeView('contact', 'contactItem');
+});
+
+// Hamburger Event Listeners
+hamToggle.addEventListener('click', () => {
+    document.body.classList.toggle('hamburger-open');
+});
+
+hamHome.addEventListener('click', () => {
+    document.body.classList.remove('hamburger-open');
+    changeView('home', 'homeItem');
+});
+
+hamAbout.addEventListener('click', () => {
+    document.body.classList.remove('hamburger-open');
+    changeView('about', 'aboutItem');
+});
+
+hamWork.addEventListener('click', () => {
+    document.body.classList.remove('hamburger-open');
+    changeView('work', 'workItem');
+});
+
+hamContact.addEventListener('click', () => {
+    document.body.classList.remove('hamburger-open');
     changeView('contact', 'contactItem');
 });
