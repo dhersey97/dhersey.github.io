@@ -721,6 +721,7 @@ section {
         position: fixed;
         background: var(--clr-bckgrnd);
         border-top: 1px solid var(--clr-accent);
+        word-spacing: 10vw;
     }
     
     .social-list.footer {
@@ -848,7 +849,7 @@ section {
 
         .experience-header {
             margin-left: 25px;
-            line-height: 35px;
+            line-height: 40px;
         }
 
         .experience{
