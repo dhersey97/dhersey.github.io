@@ -184,10 +184,13 @@ section {
 
 .social-list.footer {
     bottom: 10px;
+    word-spacing: 0;
 }
 
 .social-list.footer > a{
     color: var(--clr-accent);
+    margin-left: 3vw;
+    margin-right: 3vw;
 }
 
 .main {
@@ -241,7 +244,7 @@ section {
     border-radius: 50px;
     padding: 2em;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     top: 1em;
     right: 1em;
     z-index: 1000;
@@ -573,6 +576,7 @@ section {
 .formSubmitButton {
     display: flex;
     justify-content: center;
+    margin-bottom: 10vh;
 }
 
 .control {
@@ -800,6 +804,10 @@ section {
     and (max-height: 812px){
         .footer{
             display: initial;
+        }
+
+        .home-right-zone {
+            margin-bottom: 10vh;
         }
 
         /*  About Section   */
