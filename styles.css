@@ -114,6 +114,7 @@ img {
     filter: drop-shadow(7px 7px 4px rgba(0, 0, 0, 0.7));
 }
 
+
 button {
     background-color: var(--clr-accentDark);
     border: 1px solid var(--clr-accentLight);
@@ -160,8 +161,18 @@ section {
     bottom: 0;
 }
 
-.logo {
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
     height: 20vh;
+}
+
+.logo {
+    margin-top: 1vh;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .nav-list {
@@ -326,6 +337,7 @@ section {
 }
 
 .home-left-zone-subtext {
+    text-align: left;
     padding: 15px;
     max-width: 500px;
 }
@@ -348,6 +360,7 @@ section {
     margin-top: 15vh;
     margin-right: 15vw;
     margin-left: 15vw;
+    margin-bottom: 15vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -547,6 +560,7 @@ section {
 
 .project-skill-list {
     padding: 2vh;
+    word-spacing: .75rem;
     border-bottom: var(--border-1);
 }
 
@@ -624,6 +638,13 @@ section {
     and (max-height: 1309px){
         .home-right-zone{
             margin-right: 20vw;
+        }
+    }
+/*  My Desktop  */
+@media only screen and (max-width: 1920px)
+    and (max-height: 1080px){
+        .work-zone-wrapper{
+            margin-bottom: 0;
         }
     }
 
