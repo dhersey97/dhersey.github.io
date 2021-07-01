@@ -11,6 +11,9 @@ const hamAbout = document.getElementById('HamAbout');
 const hamWork = document.getElementById('HamWork');
 const hamContact = document.getElementById('HamContact');
 
+// Misc Buttons
+const abtContactbtn = document.getElementById('abtContact');
+
 // Hides the section as well as changes the color of the
 // list item backgrounds back to "inactive" or black
 function hideAll() {
@@ -53,6 +56,10 @@ workButton.addEventListener("click", () => {
 });
 
 contactButton.addEventListener("click", () => {
+    changeView('contact', 'contactItem');
+});
+
+abtContactbtn.addEventListener('click', () => {
     changeView('contact', 'contactItem');
 });
 
