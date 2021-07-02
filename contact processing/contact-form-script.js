@@ -16,7 +16,7 @@ function submitForm() {
     let subject = "Mail from Portfolio Website"
     let message = $("#message").val();
 
-    $ajax({
+    $.ajax({
         type: "POST",
         url: "contact processing\form-process.php",
         data: "name=" + name + "&email=" + email + "&msg_subject=" + subject + "&message=" + message,
