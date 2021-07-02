@@ -189,17 +189,33 @@
                 <div class="fade-in">
                     <div class="form-container">
                         <h1 style="text-align: center;">Contact Me</h1>
-                        <form class="contactForm">
+                        <form class="contactForm" id="contactForm" data-toggle="validator">
                             <label for="name">Name *</label>
                             <div class="control">
-                                <input class="input-bar" type="text" name="name" placeholder="Enter Your Name" required>
+                                <input class="input-bar" 
+                                    type="text" 
+                                    id="name" 
+                                    placeholder="Enter Your Name" 
+                                    required 
+                                    data-error="Please enter your name">
                             </div>
                             <label for="email">Email *</label>
-                            <input class="input-bar" type="text" name="email" placeholder="Enter Your Email" required>
+                            <input class="input-bar" 
+                                type="email"
+                                id = "email" 
+                                name="email" 
+                                placeholder="Enter Your Email" 
+                                required
+                                data-error="Please enter your email">
                             <label for="message">Message *</label>
-                            <textarea id="message" class="input-bar txtarea" placeholder="" required></textarea>
+                            <textarea class="input-bar txtarea" 
+                                id="message" 
+                                name="messagebody" 
+                                placeholder="Enter Message Here" 
+                                required
+                                data-error="Write your message"></textarea>
                             <div class="formSubmitButton">
-                                <button class = "about-button">Submit</button>
+                                <button class="about-button" type="submit" id="submit" name="submit">Submit</button>
                             </div>
                         </form>
                     </div>
@@ -218,5 +234,6 @@
             <!--    /Footer     -->
         </main>
         <script type="text/javascript" src="index.js"></script>
+        <script type="text/javascript" src="./contact processing/contact-form-script.js"></script>
     </body>
 </html>
