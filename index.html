@@ -10,7 +10,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">  
         <link rel="stylesheet" type="text/css" href="styles.css">
         <script src="https://kit.fontawesome.com/e334793d0c.js" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="assets\jquery-min.js"></script>
     </head>
     <body>
         <header class="left-header">
@@ -190,15 +189,14 @@
                 <div class="fade-in">
                     <div class="form-container">
                         <h1 style="text-align: center;">Contact Me</h1>
-                        <form class="contactForm" id="contactForm" data-toggle="validator">
+                        <form class="contactForm" id="contactForm">
                             <label for="name">Name *</label>
                             <div class="control">
                                 <input class="input-bar" 
                                     type="text" 
                                     id="name" 
                                     placeholder="Enter Your Name" 
-                                    required 
-                                    data-error="Please enter your name">
+                                    required>
                             </div>
                             <label for="email">Email *</label>
                             <input class="input-bar" 
@@ -206,15 +204,13 @@
                                 id = "email" 
                                 name="email" 
                                 placeholder="Enter Your Email" 
-                                required
-                                data-error="Please enter your email">
+                                required>
                             <label for="message">Message *</label>
                             <textarea class="input-bar txtarea" 
                                 id="message" 
                                 name="messagebody" 
                                 placeholder="Enter Message Here" 
-                                required
-                                data-error="Write your message"></textarea>
+                                required></textarea>
                             <div class="formSubmitButton">
                                 <button class="about-button" type="submit" id="submit" name="submit">Submit</button>
                             </div>
@@ -234,8 +230,6 @@
             </footer>
             <!--    /Footer     -->
         </main>
-        <script type="text/javascript" src="assets\form-validator.min.js"></script>
-        <script type="text/javascript" src="./contact processing/contact-form-script.js"></script>
         <script type="text/javascript" src="index.js"></script>
     </body>
 </html>
