@@ -189,30 +189,34 @@
                 <div class="fade-in">
                     <div class="form-container">
                         <h1 style="text-align: center;">Contact Me</h1>
-                        <form class="contactForm" id="contactForm">
-                            <label for="name">Name *</label>
+                        <form id="contactForm" class="contactForm">
+                            <label for="from_name">Name *</label>
                             <div class="control">
                                 <input class="input-bar" 
-                                    type="text" 
-                                    id="name" 
+                                    type="text"
+                                    id="from_name"
+                                    name="from_name" 
                                     placeholder="Enter Your Name" 
-                                    required>
+                                    required />
                             </div>
-                            <label for="email">Email *</label>
+                            <label for="reply_to">Email *</label>
                             <input class="input-bar" 
-                                type="email"
-                                id = "email" 
-                                name="email" 
+                                type="text"
+                                id = "reply_to" 
+                                name="reply_to" 
                                 placeholder="Enter Your Email" 
-                                required>
+                                required />
                             <label for="message">Message *</label>
-                            <textarea class="input-bar txtarea" 
+                            <textarea class="input-bar" 
+                                form="contactForm"
                                 id="message" 
-                                name="messagebody" 
+                                name="message" 
                                 placeholder="Enter Message Here" 
-                                required></textarea>
-                            <div class="formSubmitButton">
-                                <button class="about-button" type="submit" id="submit" name="submit">Submit</button>
+                                required>
+                            </textarea>
+                            <div class="formSubmitButtonWrapper">
+                                <!--<button onclick='sendMail()' class="about-button" type="submit" id="submitButton" name="submit">Send</button>-->
+                                <input class="form-submit-button" type="submit" id="formButton" value="Send Email">
                             </div>
                         </form>
                     </div>
@@ -230,6 +234,12 @@
             </footer>
             <!--    /Footer     -->
         </main>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init("user_KRe9fvtSl0uvf2qqZxHKR");
+            })();
+        </script>
         <script type="text/javascript" src="index.js"></script>
     </body>
 </html>

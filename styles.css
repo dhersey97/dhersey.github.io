@@ -144,6 +144,7 @@ label{
 
 textarea {
     height: 20vh;
+    font-family: var(--ff-primary);
 }
 
 header,
@@ -586,12 +587,36 @@ section {
     padding: 5px;
     border-radius: 5px;
     border: var(--border-1);
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
 }
 
-.formSubmitButton {
+.formSubmitButtonWrapper {
     display: flex;
     justify-content: center;
     margin-bottom: 10vh;
+}
+
+.form-submit-button {
+    background-color: var(--clr-accentDark);
+    border: 1px solid var(--clr-accentLight);
+    border-radius: 3px;
+    color: var(--clr-light);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.form-submit-button:hover {
+    background-color: var(--clr-accentLight);
+    border: 1px solid var(--clr-accentDark);
 }
 
 .control {

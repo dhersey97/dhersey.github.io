@@ -87,3 +87,23 @@ hamContact.addEventListener('click', () => {
     document.body.classList.remove('hamburger-open');
     changeView('contact', 'contactItem');
 });
+
+
+//Mailing Contact Form
+const formButton = document.getElementById('formButton');
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    formButton.value="Sending...";
+
+    const serviceID = "service_os6sq6h";
+    const templateID = "template_99k7dym";
+
+    emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+            formButton.value='Send Mail';
+            alert('Sent!');
+        }, (err) => {
+            formButton.value = 'Send Mail';
+            alert(JSON.stringify(err));
+        })
+})
